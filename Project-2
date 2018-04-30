@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+  cout << "Enter monthly saving amount: ";
+  double monthlyInvestment;
+  cin >> monthlyInvestment;
+  const double annualIntRatePlusOne = 1 + (0.05 / 12.0);
+  //--------------------------------First Method---------------------------------------------------------
+  double total = monthlyInvestment * annualIntRatePlusOne;
+    total = (total + monthlyInvestment) * annualIntRatePlusOne;
+    total = (total + monthlyInvestment) * annualIntRatePlusOne;
+    total = (total + monthlyInvestment) * annualIntRatePlusOne;
+    total = (total + monthlyInvestment) * annualIntRatePlusOne;
+    total = (total + monthlyInvestment) * annualIntRatePlusOne;
+    cout << total << endl;
+  //-------------------------------------Alternate Method---------------------------------------------------
+  double afterFirstMonth = monthlyInvestment * annualIntRatePlusOne;
+  double afterSecMonth = (monthlyInvestment + afterFirstMonth) * annualIntRatePlusOne;
+  double afterThirdMonth = (monthlyInvestment + afterSecMonth) * annualIntRatePlusOne;
+  double afterFourthMonth = (monthlyInvestment + afterThirdMonth) * annualIntRatePlusOne;
+  double afterFifthMonth = (monthlyInvestment + afterFourthMonth) * annualIntRatePlusOne;
+  double afterSixthMonth = (monthlyInvestment + afterFifthMonth) * annualIntRatePlusOne;
+  cout << afterSixthMonth << endl;
+}
