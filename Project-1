@@ -1,0 +1,12 @@
+#include <iostream> //need for cout (displaying information to the user)
+using namespace std; //not necessary if you prefer std::
+
+int main()
+{
+  //variables
+  double area = 3.14 * 5.5 * 5.5;
+  double perimeter = 2 * 3.14* 5.5;
+
+//displaying information to the user
+  cout << "Area of a 5.5 radius circle is " << area << " and its circumference is " << perimeter << endl;
+}
